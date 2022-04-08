@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { SetupGameComponent } from './setup-game/setup-game.component';
 import { PlayGameComponent } from './play-game/play-game.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { MatButtonModule } from '@angular/material/button';
     , AppRoutingModule
     , BrowserAnimationsModule
     , MatButtonModule
+    , MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

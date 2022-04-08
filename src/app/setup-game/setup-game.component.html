@@ -1,11 +1,50 @@
-<h2>
-    Setup Game
-</h2>
-
-<button 
-    mat-raised-button 
-    color="primary"
-    routerLink="/play"
+<div 
+    id="setupGameContainer"
+    class="grid-container"    
 >
-    Begin Game
-</button>
+
+    <h2
+        class="grid-item item1"
+    >
+        Setup Game
+    </h2>
+
+    <h3
+        class="grid-item item2"
+    >
+        Choose from 2 to 8 players 
+    </h3>
+
+    <button 
+        class="btn btn-default grid-item item3"
+        mat-mini-fab 
+        color="accent" 
+        aria-label="Plus button to increase player count">
+        <mat-icon>add</mat-icon>
+    </button>
+
+    <p 
+        id="playerCountOutput"
+        class="grid-item item4"
+    >
+        2 players
+    </p>
+
+    <button 
+        class="btn btn-default grid-item item5"
+        mat-mini-fab 
+        color="accent" 
+        aria-label="Minus button to decrease player count">
+        <mat-icon>remove</mat-icon>
+    </button>
+    
+    <button 
+        class="grid-item item6"
+        mat-raised-button 
+        color="primary"
+        routerLink="/play"
+    >
+        Begin Game
+    </button>
+
+</div>
