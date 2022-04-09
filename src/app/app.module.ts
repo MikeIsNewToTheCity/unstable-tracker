@@ -9,13 +9,16 @@ import { SetupGameComponent } from './setup-game/setup-game.component';
 import { PlayGameComponent } from './play-game/play-game.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { HeaderComponent } from './header/header.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SetupGameComponent,
-    PlayGameComponent
+    PlayGameComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule
@@ -23,6 +26,7 @@ import { MatIconModule } from '@angular/material/icon';
     , BrowserAnimationsModule
     , MatButtonModule
     , MatIconModule
+    , MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

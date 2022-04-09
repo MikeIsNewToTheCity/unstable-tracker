@@ -1,0 +1,42 @@
+.mat-toolbar {
+    background-color: white;
+}
+
+#appTitle {
+    display: flex;
+    flex-direction: column;
+}
+
+.gradient-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    /* Fallback: Set a background color. */
+    background-color: black;
+
+    /* Create the gradient. */
+    background-image: linear-gradient(to right, red,orange,gold,green,blue,indigo,violet);
+
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+#title, #subtitle {
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#minorWord {
+    font-size: .5em;
+    text-transform: lowercase;
+    -webkit-text-fill-color: black; 
+    -moz-text-fill-color: black;
+}
