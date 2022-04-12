@@ -12,4 +12,20 @@ export class SetupGameComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  playerCount = 2;
+
+  increasePlayerCount = () => {
+    if (this.playerCount === 8) {
+      return;
+    }
+    this.playerCount = this.playerCount + 1;
+  };
+
+  decreasePlayerCount = () => {
+    if (this.playerCount === 2) {
+      return;
+    }
+    this.playerCount = this.playerCount - 1;
+  };
+
 }

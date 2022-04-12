@@ -19,7 +19,9 @@
         class="btn btn-default grid-item item3"
         mat-mini-fab 
         color="accent" 
-        aria-label="Minus button to decrease player count">
+        aria-label="Minus button to decrease player count"
+        (click)="decreasePlayerCount()"
+    >
         <mat-icon>remove</mat-icon>
     </button>
 
@@ -27,14 +29,16 @@
         id="playerCountOutput"
         class="grid-item item4"
     >
-        2 players
+        {{ playerCount }} players
     </p>
 
     <button 
         class="btn btn-default grid-item item5"
         mat-mini-fab 
         color="accent" 
-        aria-label="Plus button to increase player count">
+        aria-label="Plus button to increase player count"
+        (click)="increasePlayerCount()"
+    >
         <mat-icon>add</mat-icon>
     </button>
     
