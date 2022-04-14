@@ -11,6 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { HeaderComponent } from './header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     , MatButtonModule
     , MatIconModule
     , MatToolbarModule
+    , MatDividerModule
+    , MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

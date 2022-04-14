@@ -1,14 +1,121 @@
 <div
     id="playGameContainer"
+    class="grid-container flex-container"   
 >
-    <h2>
+    <h2
+        class="grid-item item1 centered-items"
+    >
         Play Game
     </h2>
     
+    <fieldset
+        class="grid-item item2"
+    >    
+        <legend>Was Ginourmous Unicorn Played?</legend>
+        <mat-radio-group 
+            aria-label="Select an option"
+        >
+            <mat-radio-button value="1">Yes, Played by me</mat-radio-button>
+            <mat-radio-button value="2">Yes, Played by another player</mat-radio-button>
+            <mat-radio-button value="3">No</mat-radio-button>
+        </mat-radio-group>
+    </fieldset>
+
+    <fieldset
+        class="grid-item item3"
+    >    
+        <legend>Did Ginormous Unicorn win the game?</legend>
+        <mat-radio-group 
+            aria-label="Select an option"
+        >
+            <mat-radio-button value="1">Yes, for me</mat-radio-button>
+            <mat-radio-button value="2">Yes, for another player</mat-radio-button>
+            <mat-radio-button value="3">No</mat-radio-button>
+        </mat-radio-group>
+    </fieldset>
+
+    <fieldset
+        class="grid-item item4"
+    >    
+        <legend>Was Double Dutch played?</legend>
+        <mat-radio-group 
+            aria-label="Select an option"
+        >
+            <mat-radio-button value="1">Yes, Played by me</mat-radio-button>
+            <mat-radio-button value="2">Yes, Played by another player</mat-radio-button>
+            <mat-radio-button value="3">No</mat-radio-button>
+        </mat-radio-group>
+    </fieldset>
+
+    <fieldset
+        class="grid-item item5"
+    >    
+        <legend>Was the Blinding Light played?</legend>
+        <mat-radio-group 
+            aria-label="Select an option"
+        >
+            <mat-radio-button value="1">Yes, played by me</mat-radio-button>
+            <mat-radio-button value="2">Yes, played against me</mat-radio-button>
+            <mat-radio-button value="3">Yes, played between two other players</mat-radio-button>
+            <mat-radio-button value="4">No</mat-radio-button>
+        </mat-radio-group>
+    </fieldset>
+
+    <mat-divider 
+        class="grid-item item6"
+    >
+    </mat-divider>
+
+    <h3
+        class="grid-item item7 centered-items"
+    >
+        Game Outcome
+    </h3>
+
     <button 
         mat-raised-button 
         color="primary"
+        class="grid-item item8"
+        id="winButton"
+    >
+        Win
+    </button>
+
+    <button 
+        mat-raised-button 
+        color="primary"
+        class="grid-item item9"
+        id="lossButton"
+    >
+        Loss
+    </button>
+
+    <div
+        class="grid-item item10 centered-items"
+    >
+        <button 
+            mat-button
+            id="noWinButton"
+        >
+            <span
+                id="noWinText"
+            >
+                No Winner
+            </span>
+        </button>
+        <span 
+            class="material-icons-outlined info-icon pointer" 
+            title="The game rules allow for a rare edge case where no one wins the game if a draw persists following tie breaking steps. You will likely never experience this, but this is here should you need it."
+        >
+            info
+        </span>
+    </div>
+    
+    <button 
+        mat-raised-button 
+        color="warn"
         routerLink="/"
+        class="grid-item item11"
     >
         Finish Game
     </button>

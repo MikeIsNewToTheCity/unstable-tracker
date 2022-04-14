@@ -1,0 +1,85 @@
+/* .grid-container {
+    display: grid;
+    row-gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.item1 {
+    grid-column: 1 / span 4;
+}
+.item2 {
+    grid-column: 1 / span 4;
+}
+.item3 {
+    grid-column: 1 / span 4;
+}
+.item4 {
+    grid-column: 1 / span 4;
+}
+.item5 {
+    grid-column: 1 / span 4;
+}
+.item6 {
+    grid-column: 1 / span 4;
+}
+.item7 {
+    grid-column: 1 / span 4;
+}
+.item8 {
+    grid-column: 1 / span 2;
+}
+.item9 {
+    grid-column: 3 / span 2;
+}
+.item10 {
+    grid-column: 1 / span 4;
+}
+.item11 {
+    grid-column: 1 / span 4;
+} */
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.centered-items {
+    align-self: center;
+}
+
+.mat-divider {
+    width: 100%;
+}
+
+.fieldset {
+    width: 100%;
+    border-radius: 3px;
+}
+
+/* .mat-radio-group {
+    display: flex;
+    flex-direction: column;
+} */
+
+.mat-radio-button {
+    padding-left: 30px;;
+}
+
+#winButton, #lossButton {
+    width: 100%;
+    margin: 5px 0px;
+}
+
+#noWinText {
+    font-size: x-small;
+}
+
+.info-icon {
+    font-size:small;
+}
+
+.pointer {
+    cursor: default;
+}
+
