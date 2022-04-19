@@ -13,6 +13,7 @@ import { HeaderComponent } from './header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { MatRadioModule } from '@angular/material/radio';
     , MatToolbarModule
     , MatDividerModule
     , MatRadioModule
+    , MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

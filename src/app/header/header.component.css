@@ -40,3 +40,9 @@
     -webkit-text-fill-color: black; 
     -moz-text-fill-color: black;
 }
+
+mat-divider {
+    border-width: 2px;
+    margin: 3px 0px 3px;
+    width: auto;
+}
