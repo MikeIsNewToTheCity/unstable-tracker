@@ -14,13 +14,18 @@
         <legend>Was Ginormous Unicorn Played?</legend>
         <mat-radio-group 
             aria-label="Select an option"
+            [(ngModel)]="ginormousPlayed"
         >
             <mat-radio-button value="1">Played by me</mat-radio-button>
             <mat-radio-button value="2">Played by opponent</mat-radio-button>
             <mat-radio-button value="3">No</mat-radio-button>
         </mat-radio-group>
         <mat-divider></mat-divider>
-            <mat-checkbox>Game winning move?</mat-checkbox>
+            <mat-checkbox
+                [(ngModel)]="ginormousWonGame"
+            >
+                Game winning move?
+            </mat-checkbox>
     </fieldset>
 
     <fieldset
@@ -29,6 +34,7 @@
         <legend>Game Outcome</legend>
         <mat-radio-group
             aria-label="Select an option"
+            [(ngModel)]="gameOutcome"
         >
             <mat-radio-button value="1">I won</mat-radio-button>
             <mat-radio-button value="2">I lost</mat-radio-button>
@@ -47,7 +53,7 @@
     <button 
         mat-raised-button 
         color="warn"
-        routerLink="/"
+        (click)="finishGame()"
         id="finish-game-button"
     >
         Finish Game

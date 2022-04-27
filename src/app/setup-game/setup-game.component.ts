@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { GameService } from '../game.service';
 
 @Component({
   selector: 'app-setup-game',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SetupGameComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public gameSvc: GameService
+    , public routerSvc: Router
+  ) { }
 
   ngOnInit(): void {
   }
@@ -26,6 +31,11 @@ export class SetupGameComponent implements OnInit {
       return;
     }
     this.playerCount = this.playerCount - 1;
+  };
+
+  beginGame = () => {
+    this.gameSvc.playerCount=this.playerCount
+    this.routerSvc.navigateByUrl("/play");
   };
 
 }

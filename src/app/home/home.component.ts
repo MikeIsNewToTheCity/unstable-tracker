@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GameService } from '../game.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public gameSvc: GameService) { }
 
   ngOnInit(): void {
+    console.log(this.gameSvc.gameResults);
+    this.myWins=this.gameSvc.gameResults.filter(x => x.go === "1").length;
   }
+
+  myWins = 0;
 
 }
