@@ -15,6 +15,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { FormsModule } from '@angular/forms';
     , MatRadioModule
     , MatCheckboxModule
     , FormsModule
+    , NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
