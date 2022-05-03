@@ -10,6 +10,7 @@ const routes: Routes = [
   , { path: "play", component: PlayGameComponent }
 ];
 
+
 @NgModule({
   imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
