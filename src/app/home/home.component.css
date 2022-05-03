@@ -1,0 +1,14 @@
+
+h2, h4 {
+    text-align: center;
+    margin: 10px auto;
+}
+
+button {
+    margin: 20px auto 10px;
+    display: block;
+}
+
+.results {
+    font-weight: bold;
+}

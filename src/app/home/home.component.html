@@ -15,21 +15,27 @@
 
     <br><br>
 
-    <h4>
-        Number of Games Played: {{ gameSvc.gameResults.length }}
+    <h4
+        class="results"
+    >
+        Games Played: {{ gameSvc.gameResults.length }}
     </h4>
 
-    <h4>
-        Number of Games I Won: {{ myWins }}
+    <h4
+        class="results"
+    >
+        Games I Won: {{ myWins }}
     </h4>
 
     <br>
 
-    <div>
-        <canvas id="winLossChart">
-            
+    <div style="display: block">
+        <canvas baseChart
+          [data]="doughnutChartData"
+  
+          [type]="doughnutChartType">
         </canvas>
-    </div>
+      </div>
 
     <br><br>
 

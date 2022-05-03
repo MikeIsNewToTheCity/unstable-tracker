@@ -17,18 +17,18 @@ export class PlayGameComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  ginormousPlayed = "3";
+  ginormousPlayed = "No";
   ginormousWonGame = false;
-  gameOutcome = "3";
+  gameOutcome = "No winner";
 
   finishGame = () => {
     this.gameSvc.addNewGameResult(
       {
-        gp: this.ginormousPlayed
-        , gwg: this.ginormousWonGame
-        , go: this.gameOutcome
-        , pc: this.gameSvc.playerCount
-      }
+        ginormousUnicornPlayed: this.ginormousPlayed
+        , ginormousUnicornWonTheGame: this.ginormousWonGame
+        , gameOutcome: this.gameOutcome
+        , playerCount: this.gameSvc.playerCount
+      } // old property names: gp, gwg, go, pc
     );
 
     this.routerSvc.navigateByUrl("/");
