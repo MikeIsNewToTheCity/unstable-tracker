@@ -4,6 +4,7 @@ import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 // import {Chart} from 'chart.js'; // WTF?!
 import ChartDataLabels from 'chartjs-plugin-datalabels'; // WTF?!
+import { formatPercent } from '@angular/common';
 
 
 @Component({
@@ -89,18 +90,24 @@ export class HomeComponent implements OnInit {
     }
 
 
-
-
-
   constructor(public gameSvc: GameService) { }
 
   ngOnInit(): void {
     console.log(this.gameSvc.gameResults);
     this.myWins = this.gameSvc.gameResults.filter(x => x.gameOutcome === "I won").length;
+    if (this.gameSvc.gameResults.length === 0 ) 
+      {
+        this.winRatio = this.winRatio;
+      }
+    else
+      {
+        this.calculateRatio = this.myWins / this.gameSvc.gameResults.length;
+        // formatPercent(value: this.calculateRatio, locale: 'en-US', digitsInfo?: '2.0-0'): string;
+      }
   }
 
   myWins = 0;
-
-
+  calculateRatio = 0;
+  winRatio = 0
 
 }
