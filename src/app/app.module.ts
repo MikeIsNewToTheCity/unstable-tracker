@@ -16,6 +16,9 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
 import { NgChartsModule } from 'ng2-charts';
+// import { Chart } from 'chart.js';
+// import ChartDataLabels from 'chartjs-plugin-datalabels';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +40,7 @@ import { NgChartsModule } from 'ng2-charts';
     , MatCheckboxModule
     , FormsModule
     , NgChartsModule
+    // , Chart
   ],
   providers: [],
   bootstrap: [AppComponent]

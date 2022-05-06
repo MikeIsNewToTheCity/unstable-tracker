@@ -12,3 +12,7 @@ button {
 .results {
     font-weight: bold;
 }
+
+.charts {
+    display: block;
+}
