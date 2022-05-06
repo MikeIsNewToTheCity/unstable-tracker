@@ -3,7 +3,7 @@ import { GameService } from '../game.service';
 import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 // import {Chart} from 'chart.js'; // WTF?!
-import ChartDataLabels from 'chartjs-plugin-datalabels'; // WTF?!
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { formatPercent } from '@angular/common';
 
 
@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
       scales: {
         x: {},
         y: {
-          min: 10
+          min: 0
         }
       },
       plugins: {
@@ -58,11 +58,23 @@ export class HomeComponent implements OnInit {
       // DataLabelsPlugin  // WTF?!
     ];
 
+    getGameCount = ( playerCount: number ) => {
+      return this.gameSvc.gameResults.filter( x => x.playerCount === playerCount ).length;
+    };
+
     public barChartData: ChartData<'bar'> = {
-      labels: [ '2006', '2007', '2008', '2009', '2010', '2011', '2012' ],
+      labels: [ '2', '3', '4', '5', '6', '7', '8' ],
       datasets: [
-        { data: [ 65, 59, 80, 81, 56, 55, 40 ], label: 'Series A' },
-        { data: [ 28, 48, 40, 19, 86, 27, 90 ], label: 'Series B' }
+        { data: [ 
+            this.getGameCount(2)
+            , this.getGameCount(3)
+            , this.getGameCount(4)
+            , this.getGameCount(5)
+            , this.getGameCount(6)
+            , this.getGameCount(7)
+            , this.getGameCount(8)
+        ], label: 'Game Count' },
+        // { data: [ 28, 48, 40, 19, 86, 27, 90 ], label: 'Series B' }
       ]
     };
 
@@ -75,19 +87,6 @@ export class HomeComponent implements OnInit {
       console.log(event, active);
     }
 
-    public randomize(): void {
-      // Only Change 3 values
-      this.barChartData.datasets[0].data = [
-        Math.round(Math.random() * 100),
-        59,
-        80,
-        Math.round(Math.random() * 100),
-        56,
-        Math.round(Math.random() * 100),
-        40 ];
-
-      this.chart?.update();
-    }
 
 
   constructor(public gameSvc: GameService) { }
@@ -95,19 +94,13 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.gameSvc.gameResults);
     this.myWins = this.gameSvc.gameResults.filter(x => x.gameOutcome === "I won").length;
-    if (this.gameSvc.gameResults.length === 0 ) 
-      {
-        this.winRatio = this.winRatio;
-      }
-    else
-      {
-        this.calculateRatio = this.myWins / this.gameSvc.gameResults.length;
-        // formatPercent(value: this.calculateRatio, locale: 'en-US', digitsInfo?: '2.0-0'): string;
+    if (this.gameSvc.gameResults.length !== 0 ) {
+        this.calculateRatio = (this.myWins / this.gameSvc.gameResults.length * 100).toFixed(0) + "%";
       }
   }
 
   myWins = 0;
-  calculateRatio = 0;
+  calculateRatio = 'N/A';
   winRatio = 0
 
 }
