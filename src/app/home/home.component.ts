@@ -38,14 +38,34 @@ export class HomeComponent implements OnInit {
       responsive: true,
       // We use these empty structures as placeholders for dynamic theming.
       scales: {
-        x: {},
-        y: {
+        x: { 
+          title: {
+            display: true,
+            text: 'Player Count'
+          }
+        }
+        , y: {
           min: 0
+          , title: {
+            display: true
+            , text: 'Game Count'
+          }
+          , ticks: {
+            stepSize: 1
+          }
         }
       },
       plugins: {
-        legend: {
-          display: true,
+        tooltip: {
+          callbacks: {
+            title: () => "Bar"
+            , label: () => {
+              return "Foo";
+            }
+          }
+        }
+        , legend: {
+          display: false,
         },
         datalabels: {
           anchor: 'end',
@@ -73,8 +93,10 @@ export class HomeComponent implements OnInit {
             , this.getGameCount(6)
             , this.getGameCount(7)
             , this.getGameCount(8)
-        ], label: 'Game Count' },
-        // { data: [ 28, 48, 40, 19, 86, 27, 90 ], label: 'Series B' }
+          ]
+          , label: 'Game Count'
+        }
+        // , { data: [ 28, 48, 40, 19, 86, 27, 90 ], label: 'Series B' }
       ]
     };
 
