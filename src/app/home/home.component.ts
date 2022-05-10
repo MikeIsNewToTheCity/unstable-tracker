@@ -2,9 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { GameService } from '../game.service';
 import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
-// import {Chart} from 'chart.js'; // WTF?!
 import ChartDataLabels from 'chartjs-plugin-datalabels';
-import { formatPercent } from '@angular/common';
 
 
 @Component({
