@@ -56,10 +56,11 @@ export class HomeComponent implements OnInit {
       plugins: {
         tooltip: {
           callbacks: {
-            title: () => "Bar"
-            , label: () => {
-              return "Foo";
-            }
+            // Title defaults to the x-axis value in the labels array in barChartData 
+            afterTitle: () => "-player games"
+
+            // Label defaults to the label value in the data object within the datasets array in barChartData 
+            // , label: () => "Game Count"
           }
         }
         , legend: {
@@ -73,7 +74,7 @@ export class HomeComponent implements OnInit {
     };
     public barChartType: ChartType = 'bar';
     public barChartPlugins = [
-      // DataLabelsPlugin  // WTF?!
+      // DataLabelsPlugin
     ];
 
     getGameCount = ( playerCount: number ) => {
